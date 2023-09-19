@@ -55,7 +55,7 @@ const downloadVT = async (getTiktokURL) => {
             downloadedBytes += chunk.length;
             const percentComplete = (downloadedBytes / totalBytes) * 100;
             process.stdout.clearLine(); 
-            process.stdout.cursorTo(0); 
+            process.stdout.cursorTo(0);
             process.stdout.write(`Sedang Mendownload Video ${percentComplete.toFixed(2)}%`);
         });
 
@@ -66,7 +66,6 @@ const downloadVT = async (getTiktokURL) => {
         });
 
         process.stdout.write('\n'); 
-        // console.log(`Video downloaded successfully`);
     } catch (error) {
         console.log(error);
     }
